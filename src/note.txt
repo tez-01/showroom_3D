@@ -1,17 +1,4 @@
-object 16 - body kit + Seats
-object 14 -chain
-object 18 - handle
-object 19 - cylinder
-object 21 - sliencer
-object 22 - rim
-object 23 - back tyre
-object 24 - front tyre
-object 25 - discs
-object 13 - light set
-object 17 - display
-
-
-MT
+Yamaha MT
 
 object 20 - front discs
 object 22 - back disc
