@@ -8,7 +8,7 @@ export async function loadBikeModel(scene, url = '/models/bikes/yamaha_mt-09_v4.
     const bike = gltf.scene;
 
     // Center and adjust initial scale/position if necessary
-    bike.position.set(0, 0, 0);
+    bike.position.set(0, 0.6, 0);
 
     const bikeParts = {};
 

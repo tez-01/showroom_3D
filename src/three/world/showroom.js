@@ -21,4 +21,4 @@ export async function loadShowroom(scene, url = '/models/environment/car-showroo
     console.error('Failed to load showroom environment model:', error);
     throw error;
   }
-}
+}

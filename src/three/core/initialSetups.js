@@ -1,7 +1,8 @@
 import * as THREE from 'three';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+import { setupShowroomLighting } from './lights.js';
 
-export function createInitialSetups(mountElement) {
+export function createInitialSetups(mountElement, lightOptions = {}) {
   const scene = new THREE.Scene();
   scene.background = new THREE.Color(0x0a0b10);
   scene.fog = new THREE.FogExp2(0x0a0b10, 0.015);
@@ -27,40 +28,28 @@ export function createInitialSetups(mountElement) {
   renderer.toneMappingExposure = 1.1;
   renderer.outputColorSpace = THREE.SRGBColorSpace;
   mountElement.appendChild(renderer.domElement);
-
   const controls = new OrbitControls(camera, renderer.domElement);
   controls.enableDamping = true;
   controls.dampingFactor = 0.05;
-  controls.maxPolarAngle = Math.PI / 2 + 0.02;
-  controls.minDistance = 1;
-  controls.maxDistance = 25;
-  controls.target.set(0, 0.8, 0);
+  controls.enablePan = false;
+
+  // Horizontal rotation: Full 360° rotation around the bike (unrestricted azimuth)
+  controls.minAzimuthAngle = -Infinity;
+  controls.maxAzimuthAngle = Infinity;
+  controls.minPolarAngle = THREE.MathUtils.degToRad(60);
+  controls.maxPolarAngle = THREE.MathUtils.degToRad(90);
+
+  // Zoom distance bounds
+  controls.minDistance = 1.5;
+  controls.maxDistance = 5.8;
+  // controls.maxDistance = 20;
+
+  // Look-at center target (center of bike)
+  controls.target.set(0, 0.6, 0);
   controls.update();
 
-  const ambientLight = new THREE.AmbientLight(0xffffff, 0.9);
-  scene.add(ambientLight);
-
-  const mainDirLight = new THREE.DirectionalLight(0xffffff, 2.5);
-  mainDirLight.position.set(5, 8, 5);
-  mainDirLight.castShadow = true;
-  mainDirLight.shadow.mapSize.width = 2048;
-  mainDirLight.shadow.mapSize.height = 2048;
-  mainDirLight.shadow.camera.near = 0.5;
-  mainDirLight.shadow.camera.far = 25;
-  mainDirLight.shadow.camera.left = -6;
-  mainDirLight.shadow.camera.right = 6;
-  mainDirLight.shadow.camera.top = 6;
-  mainDirLight.shadow.camera.bottom = -6;
-  mainDirLight.shadow.bias = -0.0001;
-  scene.add(mainDirLight);
-
-  const fillLight = new THREE.DirectionalLight(0x88bbff, 1.2);
-  fillLight.position.set(-5, 4, -4);
-  scene.add(fillLight);
-
-  const rimLight = new THREE.DirectionalLight(0xffaa55, 1.0);
-  rimLight.position.set(0, 6, -6);
-  scene.add(rimLight);
+  // Setup dedicated showroom lighting system with configurable toggles and helpers
+  const lightingSystem = setupShowroomLighting(scene, lightOptions);
 
   function onWindowResize() {
     const width = mountElement.clientWidth || window.innerWidth;
@@ -71,7 +60,6 @@ export function createInitialSetups(mountElement) {
   }
   window.addEventListener('resize', onWindowResize);
 
-  return { scene, camera, renderer, controls };
+  return { scene, camera, renderer, controls, lightingSystem };
 }
-
 
