@@ -1,0 +1,130 @@
+object 16 - body kit + Seats
+object 14 -chain
+object 18 - handle
+object 19 - cylinder
+object 21 - sliencer
+object 22 - rim
+object 23 - back tyre
+object 24 - front tyre
+object 25 - discs
+object 13 - light set
+object 17 - display
+
+
+MT
+
+object 20 - front discs
+object 22 - back disc
+object 28 - logo yamaha
+object 24 - backlight part
+object 32 - body kit main
+object 34 - body side graphics 
+object 36 - tank and tail black color
+object 26 - tank bolt/nut
+object 30 - tank pads
+object 38 - key socket
+object 40 - seats
+object 42 - tank filler area and side screws
+object 44 - side graphics lines
+object 46 - tail lamp left leds
+object 48 - center joiner tail lamp
+object 50 - tail lamp right leds
+object 52 - back footrest and all main bolts
+object 54 - chasies
+object 56 - inside parts (not required)
+object 58 - inside parts (not required)
+object 60 - display part
+object 62 - display part
+object 64 - display part 
+object 66 - display part
+object 68 - mirror badging
+object 70 - mirror glasses
+object 72 - side mirrors
+object 74 - visor
+object 76 - visor bolts
+object 78 - visor guard handler
+object 80 - handle guards
+object 82 - handle guard nuts
+object 84 - head lamp top logo
+object 86 - front fairing below headlight
+object 88 - right front projector
+object 90 - left front projector
+object 92 - front fork bolt
+object 94 - aluminium suspension
+object 96 - suspension below stump
+object 98 - Yamaha logo front mudguard
+object 100 - caliber front
+object 102 - mudguard front
+object 104 - front cable
+object 106 - brenmbo logo name
+object 108 - side reflector front
+object 110 - break pad front
+object 112 - head part front inside
+object 114 - bolt inner side
+object 116 - head part front black covering
+object 118 - upside fork 
+object 120 - head fairing
+object 122 - head fairing black covering 
+object 124 - fork cap
+object 126 - fork bolt/caps
+object 128 - break fuild part
+object 130 - cable side
+object 132 - break/clutch lever
+object 134 - fluid cap and somw switchs front
+object 136 - cables front sides
+object 138 - not required
+object 140 - kill switch
+object 142 - handle grip
+object 144 - complete handle bar remaining part
+object 146 - fluid part
+object 148 - left DRL
+object 150 - right DRL
+object 152 - left led indicator
+object 154 - right led indicator
+object 156 - tft display
+object 158 - silencer part 
+object 160 - silencer part
+object 162 - bolt part silencer
+object 164 - complete silencer pipe
+object 166 - silencer bolts
+object 168 - silencer clamp
+object 170 - acra logo silencer
+object 172 - silencerclam holder
+object 174 - center suspension
+object 176 - center suspension parts
+object 178 - suspension oil cylinder text
+object 180 - suspension set
+object 182 - suspension oil cylinder
+object 184 - inside cables
+object 186 - inside nuts
+object 188 - indicator black part
+object 190 - oil cooler pipe
+object 192 - break parts
+object 194 - quick shifter
+object 196 - black covering parts
+object 198 - center stand area
+object 200 - oil filter cap
+object 202 - radiator covering part
+object 204 - inside cable pipes
+object 206 - radiator grills
+object 208 - foot rest and clamps
+object 210 - back oil 
+object 212 - oil cap back
+object 214 - motor starter
+object 216 - complete engine and radiator remaining parts
+object 218 - chain sprocket back
+object 220 - unknown part meterside
+object 222 - back tire clamps and bolt
+object 224 - chain
+object 226 - break parts
+object 228 - back chasies
+object 230 - back caliber
+object 232 - back mudguard part
+object 234 - rear fluid cable
+object 236 - breaklight red
+object 246 - back rim shades
+object 248 - back rim
+object 250,252 - rear tyre part
+object 240 - front rim 
+object 238 - front rim shades
+object 242,244 - front tyre

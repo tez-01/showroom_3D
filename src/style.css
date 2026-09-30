@@ -1,25 +1,8 @@
-:root {
-  font-family: Arial, sans-serif;
-  color: #171717;
-  background: #fff;
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-body {
-  min-width: 320px;
+#model-environment {
+  width: 100%;
   min-height: 100vh;
-  margin: 0;
 }
 
-#app {
-  min-height: 100vh;
+#model-environment canvas {
+  display: block;
 }
