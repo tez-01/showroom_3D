@@ -2,6 +2,10 @@ import * as THREE from "three";
 import { createInitialSetups } from "./core/initialSetups.js";
 import { loadShowroom } from "./world/showroom.js";
 import { loadBikeModel } from "./models/bikes.js";
+import { setupLightingGUI } from "./utils/gui.js";
+
+
+
 
 export async function startThreeScene() {
   const mountElement = document.getElementById("model-environment");
@@ -10,7 +14,11 @@ export async function startThreeScene() {
     throw new Error("Could not find #model-environment element in DOM.");
   }
 
-  const { scene, camera, renderer, controls } = createInitialSetups(mountElement);
+  const { scene, camera, renderer, controls, lightingSystem } = createInitialSetups(mountElement);
+
+  // Initialize live GUI control panel for real-time light testing
+  setupLightingGUI(lightingSystem);
+
 
   let showroom = null;
   let bikeData = null;
